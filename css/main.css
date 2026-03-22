@@ -1,0 +1,321 @@
+body {
+    margin: 0 auto;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+}
+
+.main {
+    margin: 0 100px;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.intro-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    margin: 0px;
+}
+
+.drop-name {
+    display: inline-block;
+    color: rgba(12, 108, 225, 0.823);
+    animation: dropIn 1s ease-out forwards;
+}
+
+/* Keyframes for drop effect */
+@keyframes dropIn {
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    60% {
+        transform: translateY(10px);
+        opacity: 1;
+    }
+    80% {
+        transform: translateY(-5px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+h1 {
+    margin: 0px;
+    padding: 0px;
+}
+
+.contact-btn {
+    background-color: rgb(21, 128, 204);
+    color: white;
+    border-radius: 50px;
+    border: none;
+    padding: 10px;
+}
+
+.about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 800px;   /* controls readability */
+    margin: 0 auto;     /* centers it */
+    text-align: center;
+}
+
+.about p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.about-heading {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+/* Optional underline accent */
+.about-heading::after {
+    content: "";
+    width: 50px;
+    height: 3px;
+    background-color: rgb(21, 128, 204);
+    display: block;
+    margin: 8px auto 0;
+}
+
+.about {
+    padding: 40px 20px;
+}
+
+.about-heading {
+    align-items: center;
+}
+
+.cards {
+    display: flex;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 20vh;
+    width: 200px;
+    padding: 10px;
+    border-radius: 12px;
+    background-color: white;
+
+    /* 🔥 Grey + blue layered shadow */
+    box-shadow: 
+        0 4px 10px rgba(0, 0, 0, 0.08),   /* soft grey */
+        0 8px 20px rgba(21, 128, 204, 0.15); /* blue glow */
+
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+
+    box-shadow: 
+        0 8px 20px rgba(0, 0, 0, 0.12),
+        0 12px 30px rgba(21, 128, 204, 0.25);
+}
+
+.card h5 {
+    text-align: center;
+    color: rgba(12, 108, 225, 0.823);
+}
+
+.services h4 {
+    margin-bottom: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.services {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+.card {
+    display: flex;
+    border: #333 none;
+    height: 20vh;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+
+    background: #ffffff;
+    padding: 35px;
+    border-radius: 16px;
+    width: 320px;
+
+    box-shadow: 
+        0 6px 20px rgba(0, 0, 0, 0.08),
+        0 10px 30px rgba(21, 128, 204, 0.08);
+}
+
+.form-item {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+
+.form-item label {
+    font-size: 13px;
+    font-weight: 500;
+    color: #444;
+}
+
+.form-item input,
+.form-item textarea {
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+    outline: none;
+
+    transition: all 0.25s ease;
+}
+
+.form-item label {
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #555;
+}
+
+/* INPUTS + TEXTAREA */
+.form-item input,
+.form-item textarea {
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+    outline: none;
+
+    transition: all 0.25s ease;
+}
+
+/* FOCUS EFFECT */
+.form-item input:focus,
+.form-item textarea:focus {
+    border-color: rgb(21, 128, 204);
+    box-shadow: 0 0 0 3px rgba(21, 128, 204, 0.15);
+}
+
+/* TEXTAREA CLEANUP */
+.form-item textarea {
+    resize: none;
+    height: 120px;
+}
+
+/* BUTTON */
+.form button {
+    margin-top: 10px;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    background: rgb(21, 128, 204);
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+.form button:hover {
+    background: rgb(16, 100, 170);
+    transform: translateY(-2px);
+}
+
+/************* Media Queries *************/
+
+/************* max-width: 600px *************/
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 1rem;
+    }
+
+    h2 {
+        font-size: 1rem;
+    }
+
+    h3 {
+        font-size: 1rem;
+    }
+
+    h4 {
+        font-size: 0.7rem;
+    }
+
+    h5 {
+        font-size: 0.5rem;
+    }
+
+    p {
+        font-size: 0.5rem;
+    }
+
+    .contact-btn {
+        font-size: 0.5rem;
+        padding: 5px;
+    }
+
+    .about-heading {
+        font-size: 0.7rem;
+    }
+
+    .card {
+        height: 10vh;
+        width: 150px;
+    }
+
+    img {
+        width: 20px;
+    }
+
+    label {
+        font-size: 0.8rem;
+    }
+}
