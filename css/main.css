@@ -3,6 +3,7 @@ body {
     padding: 0;
     height: 100vh;
     width: 100vw;
+    font-family: "Roboto Flex", sans-serif;
 }
 
 .main {
@@ -310,7 +311,7 @@ a {
     }
 
     .form {
-        width: 250px;
+        width: 200px;
     }
 
     .form-item label {
@@ -322,4 +323,5 @@ a {
     label {
         font-size: 0.8rem;
     }
+
 }
