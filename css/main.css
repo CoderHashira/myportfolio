@@ -252,12 +252,9 @@ a {
 
 /* ===================== RESPONSIVE ===================== */
 @media (max-width: 600px) {
+    @media (max-width: 600px) {
     .main {
         margin: 20px;
-    }
-
-    .intro-section {
-        width: 100%;
     }
 
     h1 {
@@ -265,22 +262,33 @@ a {
     }
 
     h2 {
-        font-size: 1.8rem;
-    }
-
-    h3 {
-        font-size: 1rem;
+        font-size: 1.6rem;
     }
 
     p {
-        font-size: 0.95rem;
+        font-size: 0.9rem;
     }
 
-    .contact-btn {
-        font-size: 0.8rem;
-    }
-
+    /* 🔥 FORM FIX */
     .form {
         width: 100%;
+        max-width: 280px;   /* makes it smaller */
+        padding: 20px;      /* less padding */
     }
+
+    .form-item input,
+    .form-item textarea {
+        padding: 10px;      /* smaller inputs */
+        font-size: 13px;
+    }
+
+    .form-item textarea {
+        height: 100px;      /* smaller textarea */
+    }
+
+    .form button {
+        padding: 10px;
+        font-size: 14px;
+    }
+}
 }

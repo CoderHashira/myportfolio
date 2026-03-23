@@ -1,6 +1,8 @@
+"use script";
+
 document.addEventListener("DOMContentLoaded", () => {
 
-    emailjs.init("YOUR_PUBLIC_KEY");
+    emailjs.init("pefnLSIFKY_39aZx4");
 
     const form = document.getElementById("contact-form");
     const status = document.getElementById("form-status");
@@ -10,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         status.textContent = "Sending...";
 
-        emailjs.sendForm("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", form)
+        emailjs.sendForm("service_n5lm28a", "template_9965zdu", form)
             .then(() => {
                 status.textContent = "✅ Message sent successfully!";
                 status.style.color = "green";
