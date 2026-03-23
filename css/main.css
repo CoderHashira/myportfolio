@@ -6,7 +6,7 @@ body {
 }
 
 .main {
-    margin: 0 100px;
+    margin: 0 50px;
     margin-top: 100px;
     display: flex;
     flex-direction: column;
@@ -69,13 +69,12 @@ h1 {
 }
 
 .about p {
-    line-height: 1.6;
+    line-height: 1.2;
     margin-bottom: 15px;
     color: #333;
 }
 
 .about-heading {
-    font-size: 1.8rem;
     margin-bottom: 20px;
     position: relative;
 }
@@ -128,7 +127,7 @@ h1 {
         0 12px 30px rgba(21, 128, 204, 0.25);
 }
 
-.card h5 {
+.card h3 {
     text-align: center;
     color: rgba(12, 108, 225, 0.823);
 }
@@ -273,12 +272,16 @@ a {
 /************* max-width: 600px *************/
 
 @media (max-width: 600px) {
+    .intro-section {
+        width: 300px;
+    }
+
     h1 {
-        font-size: 1rem;
+        font-size: 1.5rem;
     }
 
     h2 {
-        font-size: 1rem;
+        font-size: 2rem;
     }
 
     h3 {
@@ -294,25 +297,26 @@ a {
     }
 
     p {
-        font-size: 0.5rem;
+        font-size: 1rem;
     }
 
     .contact-btn {
-        font-size: 0.5rem;
-        padding: 5px;
+        font-size: 0.8rem;
+        padding: 10px;
     }
 
     .about-heading {
         font-size: 0.7rem;
     }
 
-    .card {
-        height: 10vh;
-        width: 150px;
+    .form {
+        width: 250px;
     }
 
-    img {
-        width: 20px;
+    .form-item label {
+        font-size: 1rem;
+        font-weight: 700;
+        color: #444;
     }
 
     label {
