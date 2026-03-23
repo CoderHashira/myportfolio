@@ -1,29 +1,27 @@
-document.addEventListener("DOMContentLoaded", function () {
+"use strict";
 
-    (function() {
-        emailjs.init("pefnLSIFKY_39aZx4");
-    })();
+document.addEventListener("DOMContentLoaded", () => {
+
+    emailjs.init("YOUR_PUBLIC_KEY");
 
     const form = document.getElementById("contact-form");
     const status = document.getElementById("form-status");
 
-    form.addEventListener("submit", function(e) {
+    form.addEventListener("submit", (e) => {
         e.preventDefault();
 
-        status.innerText = "Sending...";
+        status.textContent = "Sending...";
 
-        emailjs.sendForm("service_n5lm28a", "template_9965zdu", this)
+        emailjs.sendForm("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", form)
             .then(() => {
-                status.innerText = "✅ Message sent successfully!";
+                status.textContent = "✅ Message sent successfully!";
                 status.style.color = "green";
                 form.reset();
-            }, () => {
-                status.innerText = "❌ Failed to send. Try again.";
+            })
+            .catch(() => {
+                status.textContent = "❌ Failed to send. Try again.";
                 status.style.color = "red";
             });
     });
-
-    status.innerHTML = "✅ Message sent!";
-    status.style.color = "green";
 
 });

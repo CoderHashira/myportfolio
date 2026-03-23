@@ -3,142 +3,121 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>Tatenda Mapfumo | Portfolio</title>
 
     <link rel="stylesheet" href="./css/main.css">
 
+    <!-- Google Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght,XOPQ,XTRA,YOPQ,YTDE,YTFI,YTLC,YTUC@8..144,100..1000,96,468,79,-203,738,514,712&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex&display=swap" rel="stylesheet">
 
+    <!-- EmailJS -->
     <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-    <script src="./js/script.js"></script>
-    
+
+    <!-- Your JS -->
+    <script src="./js/script.js" defer></script>
 </head>
+
 <body>
 
-    <main class="main">
+<main class="main">
 
-        <div class="intro-section">
+    <!-- HERO -->
+    <header class="intro-section">
+        <h1>
+            Hi, I am <span class="drop-name">Tatenda Mapfumo</span>
+        </h1>
 
-            <h1 class="intro-heading">
-                Hi, I am <span class="drop-name">Tatenda Mapfumo</span>
-            </h1>
+        <p>
+            Full Stack Developer building seamless web solutions, with a strong background in administration and data management.
+        </p>
 
-            <p class="intro-paragraph">
-                Full Stack Developer building seamless web solutions, with a strong background in administration and data management.
-            </p>
+        <nav class="buttons">
+            <a href="#contact" class="btn">Get In Touch</a>
+            <!--
+            <a href="#" class="btn">View Portfolio</a>
+            -->
+        </nav>
+    </header>
 
-            <div class="buttons">
-                <a href="#get-in-touch">
-                    <button class="contact-btn">
-                        Get In Touch
-                    </button>
-                </a>
-                <a href="#">
-                    <button class="contact-btn">
-                        View Portfolio
-                    </button>
-                </a>
-            </div>
+    <!-- ABOUT -->
+    <section class="about">
+        <h2>About Me</h2>
+        <p>I’m a Full Stack Web Developer passionate about building clean, functional, and user-friendly web applications.</p>
+        <p>With a background in administration and data capturing, I bring strong attention to detail and problem-solving.</p>
+        <p>I’m always learning and looking to create impactful solutions.</p>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="services">
+        <h2>My Services</h2>
+
+        <div class="cards">
+
+            <article class="card">
+                <span class="material-symbols-outlined">computer</span>
+                <h3>Full Stack Development</h3>
+                <p>End-to-end web applications tailored to your business.</p>
+            </article>
+
+            <article class="card">
+                <span class="material-symbols-outlined">brush</span>
+                <h3>Front-End Development</h3>
+                <p>Responsive and modern user interfaces.</p>
+            </article>
+
+            <article class="card">
+                <span class="material-symbols-outlined">database</span>
+                <h3>Back-End Development</h3>
+                <p>Secure and scalable systems and APIs.</p>
+            </article>
+
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact" id="contact">
+        <h2>Get In Touch</h2>
+
+        <div class="social-icons">
+            <a href="https://github.com/CoderHashira" target="_blank">
+                <img src="./icons/github.png" alt="GitHub" width="40">
+            </a>
+            <a href="https://www.linkedin.com/in/tatenda-mapfumo-008b6420a/" target="_blank">
+                <img src="./icons/message.png" alt="LinkedIn" width="40">
+            </a>
         </div>
 
-        <div class="about">
-            <h2>About Me</h2>
+        <form class="form" id="contact-form">
 
-            <p>
-                I’m a Full Stack Web Developer passionate about building clean, functional, and user-friendly web applications.
-            </p>
-
-            <p>
-                With a background in administration and data capturing, I bring strong attention to detail, organization, and problem-solving into every project.
-            </p>
-
-            <p>
-                I’m always learning and looking for opportunities to create impactful solutions and help businesses grow online.
-            </p>
-        </div>
-
-        <div class="services">
-            <h2>My Services</h2>
-            <div class="cards">
-                <div class="card">
-                    <span class="material-symbols-outlined">
-                        computer
-                    </span>
-                    <h3 class="heading">Full Stack Web Development</h3>
-                    <p>Build complete web applications from front-end to back-end, tailored to business needs.</p>
-                </div>
-                <div class="card">
-                    <span class="material-symbols-outlined">
-                        brush
-                    </span>
-                    <h3 class="heading">Front-End Development</h3>
-                    <p>Create responsive, modern, and user-friendly interfaces using HTML, CSS, and JavaScript.</p>
-                </div>
-                <div class="card">
-                    <span class="material-symbols-outlined">
-                        database
-                    </span>
-                    <h3 class="heading">Back-End Development</h3>
-                    <p>Develop secure and scalable server-side applications, APIs, and databases.</p>
-                </div>
-                <div class="card">
-                    <span class="material-symbols-outlined">
-                        manufacturing
-                    </span>
-                    <h3>Website Maintenance & Updates</h3>
-                    <p>Help clients keep their websites updated, secure, and running smoothly.</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="contact-form">
-            <h2 id="get-in-touch">Get In Touch</h2>
-
-            <div class="social-icons">
-                <a href="https://github.com/CoderHashira" target="_blank">
-                    <img src="./icons/github.png" width="40px">
-                </a>
-                <a href="https://www.linkedin.com/in/tatenda-mapfumo-008b6420a/" target="_blank">
-                    <img src="./icons/message.png" width="40px">
-                </a>
+            <div class="form-item">
+                <label for="name">Full Name</label>
+                <input id="name" type="text" name="user_name" required>
             </div>
 
-            <form class="form" id="contact-form">
+            <div class="form-item">
+                <label for="email">Email Address</label>
+                <input id="email" type="email" name="user_email" required>
+            </div>
 
-                <div class="form-item">
-                    <label>Full Name</label>
-                    <input type="text" name="user_name" placeholder="Enter your full name" required>
-                </div>
+            <div class="form-item">
+                <label for="phone">Contact Number</label>
+                <input id="phone" type="tel" name="user_phone">
+            </div>
 
-                <div class="form-item">
-                    <label>Email Address</label>
-                    <input type="email" name="user_email" placeholder="Enter your email" required>
-                </div>
+            <div class="form-item">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" required></textarea>
+            </div>
 
-                <div class="form-item">
-                    <label>Contact Number</label>
-                    <input type="tel" name="user_phone" placeholder="Enter your number">
-                </div>
+            <button type="submit">Send Message</button>
 
-                <div class="form-item">
-                    <label>Message</label>
-                    <textarea name="message" placeholder="Type your message..." required></textarea>
-                </div>
+        </form>
 
-                <button type="submit">Send Message</button>
+        <p id="form-status"></p>
+    </section>
 
-            </form>
+</main>
 
-            <p id="form-status"></p>
-
-        </div>
-
-    </main>
-    
 </body>
 </html>
