@@ -1,35 +1,39 @@
+/* ===================== GLOBAL ===================== */
 body {
-    margin: 0 auto;
+    margin: 0;
     padding: 0;
-    height: 100vh;
-    width: 100vw;
     font-family: "Roboto Flex", sans-serif;
+    background-color: #f7f9fc;
 }
 
+/* ===================== LAYOUT ===================== */
 .main {
     margin: 0 50px;
     margin-top: 100px;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 60px;
 }
 
+/* ===================== INTRO ===================== */
 .intro-section {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    padding: 0px;
-    margin: 0px;
+    text-align: center;
 }
 
+h1 {
+    margin: 0;
+}
+
+/* Drop animation */
 .drop-name {
     display: inline-block;
     color: rgba(12, 108, 225, 0.823);
     animation: dropIn 1s ease-out forwards;
 }
 
-/* Keyframes for drop effect */
 @keyframes dropIn {
     0% {
         transform: translateY(-100px);
@@ -47,108 +51,45 @@ body {
     }
 }
 
-h1 {
-    margin: 0px;
-    padding: 0px;
-}
-
+/* Buttons */
 .contact-btn {
     background-color: rgb(21, 128, 204);
     color: white;
     border-radius: 50px;
     border: none;
-    padding: 10px;
+    padding: 10px 16px;
+    cursor: pointer;
 }
 
+/* ===================== ABOUT ===================== */
 .about {
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: 800px;   /* controls readability */
-    margin: 0 auto;     /* centers it */
+    max-width: 800px;
+    margin: 0 auto;
     text-align: center;
+    padding: 40px 20px;
 }
 
 .about p {
-    line-height: 1.2;
+    line-height: 1.5;
     margin-bottom: 15px;
     color: #333;
 }
 
-.about-heading {
-    margin-bottom: 20px;
-    position: relative;
-}
-
-/* Optional underline accent */
-.about-heading::after {
-    content: "";
-    width: 50px;
-    height: 3px;
-    background-color: rgb(21, 128, 204);
-    display: block;
-    margin: 8px auto 0;
-}
-
-.about {
-    padding: 40px 20px;
-}
-
-.about-heading {
-    align-items: center;
-}
-
-.cards {
-    display: flex;
-}
-
-.card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 30vh;
-    width: 200px;
-    padding: 5px;
-    border-radius: 12px;
-    background-color: white;
-
-    /* 🔥 Grey + blue layered shadow */
-    box-shadow: 
-        0 4px 10px rgba(0, 0, 0, 0.08),   /* soft grey */
-        0 8px 20px rgba(21, 128, 204, 0.15); /* blue glow */
-
-    transition: all 0.3s ease;
-}
-
-.card:hover {
-    transform: translateY(-8px);
-
-    box-shadow: 
-        0 8px 20px rgba(0, 0, 0, 0.12),
-        0 12px 30px rgba(21, 128, 204, 0.25);
-}
-
-.card h3 {
-    text-align: center;
-    color: rgba(12, 108, 225, 0.823);
-}
-
-.services h4 {
-    margin-bottom: 20px;
-}
-
-a {
-    text-decoration: none;
-    color: white;
-}
-
+/* ===================== SERVICES ===================== */
 .services {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
 }
 
+.services h2 {
+    margin-bottom: 20px;
+}
+
+/* Cards container */
 .cards {
     display: flex;
     justify-content: center;
@@ -156,35 +97,72 @@ a {
     gap: 30px;
 }
 
+/* Individual card */
 .card {
     display: flex;
-    border: #333 none;
-    height: 20vh;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    width: 220px;
     padding: 20px;
-    border-radius: 5px;
+    border-radius: 12px;
+    background-color: white;
+
+    box-shadow: 
+        0 4px 10px rgba(0, 0, 0, 0.08),
+        0 8px 20px rgba(21, 128, 204, 0.15);
+
+    transition: all 0.3s ease;
 }
 
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 
+        0 8px 20px rgba(0, 0, 0, 0.12),
+        0 12px 30px rgba(21, 128, 204, 0.25);
+}
+
+.card h3 {
+    color: rgba(12, 108, 225, 0.823);
+}
+
+/* ===================== LINKS ===================== */
+a {
+    text-decoration: none;
+    color: white;
+}
+
+/* ===================== CONTACT ===================== */
 .contact-form {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
 }
 
+/* Social icons */
 .social-icons {
     display: flex;
-    justify-content: center;
-    align-items: center;
     gap: 10px;
     padding: 10px;
 }
 
+.social-icons img {
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.social-icons img:hover {
+    transform: scale(1.1);
+}
+
+/* ===================== FORM ===================== */
 .form {
     display: flex;
     flex-direction: column;
     gap: 18px;
 
-    background: #ffffff;
+    background: white;
     padding: 35px;
     border-radius: 16px;
     width: 320px;
@@ -194,19 +172,21 @@ a {
         0 10px 30px rgba(21, 128, 204, 0.08);
 }
 
+/* Form items */
 .form-item {
     display: flex;
     flex-direction: column;
-    gap: 6px;
 }
 
-
+/* Labels */
 .form-item label {
+    margin-bottom: 5px;
     font-size: 13px;
     font-weight: 500;
     color: #444;
 }
 
+/* Inputs + textarea */
 .form-item input,
 .form-item textarea {
     padding: 12px;
@@ -214,42 +194,23 @@ a {
     border: 1px solid #ddd;
     font-size: 14px;
     outline: none;
-
     transition: all 0.25s ease;
 }
 
-.form-item label {
-    margin-bottom: 5px;
-    font-size: 14px;
-    color: #555;
-}
-
-/* INPUTS + TEXTAREA */
-.form-item input,
-.form-item textarea {
-    padding: 12px;
-    border-radius: 10px;
-    border: 1px solid #ddd;
-    font-size: 14px;
-    outline: none;
-
-    transition: all 0.25s ease;
-}
-
-/* FOCUS EFFECT */
+/* Focus effect */
 .form-item input:focus,
 .form-item textarea:focus {
     border-color: rgb(21, 128, 204);
     box-shadow: 0 0 0 3px rgba(21, 128, 204, 0.15);
 }
 
-/* TEXTAREA CLEANUP */
+/* Textarea */
 .form-item textarea {
     resize: none;
     height: 120px;
 }
 
-/* BUTTON */
+/* Button */
 .form button {
     margin-top: 10px;
     padding: 12px;
@@ -259,7 +220,6 @@ a {
     color: white;
     font-weight: 600;
     cursor: pointer;
-
     transition: all 0.3s ease;
 }
 
@@ -268,13 +228,21 @@ a {
     transform: translateY(-2px);
 }
 
-/************* Media Queries *************/
 
-/************* max-width: 600px *************/
+#form-status {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #333;
+}
 
+/* ===================== RESPONSIVE ===================== */
 @media (max-width: 600px) {
+    .main {
+        margin: 20px;
+    }
+
     .intro-section {
-        width: 300px;
+        width: 100%;
     }
 
     h1 {
@@ -282,46 +250,22 @@ a {
     }
 
     h2 {
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
 
     h3 {
         font-size: 1rem;
     }
 
-    h4 {
-        font-size: 0.7rem;
-    }
-
-    h5 {
-        font-size: 0.5rem;
-    }
-
     p {
-        font-size: 1rem;
+        font-size: 0.95rem;
     }
 
     .contact-btn {
         font-size: 0.8rem;
-        padding: 10px;
-    }
-
-    .about-heading {
-        font-size: 0.7rem;
     }
 
     .form {
-        width: 200px;
+        width: 100%;
     }
-
-    .form-item label {
-        font-size: 1rem;
-        font-weight: 700;
-        color: #444;
-    }
-
-    label {
-        font-size: 0.8rem;
-    }
-
 }
