@@ -9,7 +9,7 @@
 
     <!-- Google Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
     <!-- EmailJS -->
     <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
@@ -17,107 +17,170 @@
     <!-- Your JS -->
     <script src="./js/script.js" defer></script>
 </head>
-
 <body>
 
-<main class="main">
+    <main class="main">
 
-    <!-- HERO -->
-    <header class="intro-section">
-        <h1>
-            Hi, I am <span class="drop-name">Tatenda Mapfumo</span>
-        </h1>
+        <!-- HERO -->
+        <header class="intro-section">
+            <div class="hero-badge">Available for freelance and junior developer opportunities</div>
 
-        <p>
-            Full Stack Developer building seamless web solutions, with a strong background in administration and data management.
-        </p>
+            <h1>
+                Hi, I am <span class="drop-name">Tatenda Mapfumo</span>
+            </h1>
 
-        <nav class="buttons">
-            <a href="#contact" class="btn">Get In Touch</a>
-            <!--
-            <a href="#" class="btn">View Portfolio</a>
-            -->
-        </nav>
-    </header>
+            <p class="intro-text">
+                Full Stack Developer building clean, responsive, and user-friendly web solutions with a strong background in administration, data management, and problem-solving.
+            </p>
 
-    <!-- ABOUT -->
-    <section class="about">
-        <h2>About Me</h2>
-        <p>I’m a Full Stack Web Developer passionate about building clean, functional, and user-friendly web applications.</p>
-        <p>With a background in administration and data capturing, I bring strong attention to detail and problem-solving.</p>
-        <p>I’m always learning and looking to create impactful solutions.</p>
-    </section>
+            <div class="hero-actions">
+                <a href="#contact" class="btn">Get In Touch</a>
+                <a href="#projects" class="btn btn-outline">View Portfolio</a>
+                <a href="./assets/Tatenda-Mapfumo-CV.pdf" class="btn btn-secondary" download>Download CV</a>
+            </div>
+        </header>
 
-    <!-- SERVICES -->
-    <section class="services">
-        <h2>My Services</h2>
-
-        <div class="cards">
-
-            <article class="card">
-                <span class="material-symbols-outlined">computer</span>
-                <h3>Full Stack Development</h3>
-                <p>End-to-end web applications tailored to your business.</p>
-            </article>
-
-            <article class="card">
-                <span class="material-symbols-outlined">brush</span>
-                <h3>Front-End Development</h3>
-                <p>Responsive and modern user interfaces.</p>
-            </article>
-
-            <article class="card">
-                <span class="material-symbols-outlined">database</span>
-                <h3>Back-End Development</h3>
-                <p>Secure and scalable systems and APIs.</p>
-            </article>
-
-        </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section class="contact" id="contact">
-        <h2>Get In Touch</h2>
-
-        <div class="social-icons">
-            <a href="https://github.com/CoderHashira" target="_blank">
-                <img src="./icons/github.png" alt="GitHub" width="40">
-            </a>
-            <a href="https://www.linkedin.com/in/tatenda-mapfumo-008b6420a/" target="_blank">
-                <img src="./icons/message.png" alt="LinkedIn" width="40">
-            </a>
-        </div>
-
-        <form class="form" id="contact-form">
-
-            <div class="form-item">
-                <label for="name">Full Name</label>
-                <input id="name" type="text" name="user_name" required>
+        <!-- ABOUT -->
+        <section class="about section">
+            <div class="section-header">
+                <h2>About Me</h2>
+                <p class="section-subtext">
+                    I build practical digital solutions that are modern, functional, and easy to use.
+                </p>
             </div>
 
-            <div class="form-item">
-                <label for="email">Email Address</label>
-                <input id="email" type="email" name="user_email" required>
+            <div class="about-card">
+                <p>
+                    I’m a Full Stack Web Developer passionate about building clean, functional, and user-friendly web applications.
+                </p>
+                <p>
+                    With a background in administration and data capturing, I bring strong attention to detail, communication skills, and a structured approach to every project.
+                </p>
+                <p>
+                    I’m continuously learning and improving my skills to create impactful solutions for businesses and individuals.
+                </p>
+            </div>
+        </section>
+
+        <!-- SERVICES -->
+        <section class="services section">
+            <div class="section-header">
+                <h2>My Services</h2>
+                <p class="section-subtext">
+                    Here are some of the services I currently offer.
+                </p>
             </div>
 
-            <div class="form-item">
-                <label for="phone">Contact Number</label>
-                <input id="phone" type="tel" name="user_phone">
+            <div class="cards">
+                <article class="card">
+                    <span class="material-symbols-outlined">computer</span>
+                    <h3>Full Stack Development</h3>
+                    <p>End-to-end web applications tailored to your business goals and workflow needs.</p>
+                </article>
+
+                <article class="card">
+                    <span class="material-symbols-outlined">brush</span>
+                    <h3>Front-End Development</h3>
+                    <p>Responsive, modern, and visually engaging user interfaces for web platforms.</p>
+                </article>
+
+                <article class="card">
+                    <span class="material-symbols-outlined">database</span>
+                    <h3>Back-End Development</h3>
+                    <p>Secure, scalable, and efficient systems, APIs, and database-driven solutions.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- SKILLS -->
+        <section class="skills section">
+            <div class="section-header">
+                <h2>Skills</h2>
+                <p class="section-subtext">
+                    My current technical and professional skill set.
+                </p>
             </div>
 
-            <div class="form-item">
-                <label for="message">Message</label>
-                <textarea id="message" name="message" required></textarea>
+            <div class="skills-wrapper">
+                <span class="skill-badge">HTML5</span>
+                <span class="skill-badge">CSS3</span>
+                <span class="skill-badge">JavaScript</span>
+                <span class="skill-badge">Node.js</span>
+                <span class="skill-badge">Responsive Design</span>
+                <span class="skill-badge">UI Development</span>
+                <span class="skill-badge">Git & GitHub</span>
+                <span class="skill-badge">Data Management</span>
+                <span class="skill-badge">MS Excel</span>
+                <span class="skill-badge">Problem Solving</span>
+            </div>
+        </section>
+
+        <!-- PROJECTS -->
+        <section class="projects section" id="projects">
+            <div class="section-header">
+                <h2>Projects</h2>
+                <p class="section-subtext">
+                    A few of the things I am building and will showcase here.
+                </p>
             </div>
 
-            <button type="submit">Send Message</button>
+            <div class="projects-grid">
+                <article class="project-card empty-project">
+                    <span class="material-symbols-outlined">folder_open</span>
+                    <h3>No Projects Yet</h3>
+                    <p>I’m currently working on projects that will be added here soon. Please check back later.</p>
+                    <a href="#contact" class="project-link">Work with me</a>
+                </article>
+            </div>
+        </section>
 
-        </form>
+        <!-- CONTACT -->
+        <section class="contact section" id="contact">
+            <div class="section-header">
+                <h2>Get In Touch</h2>
+                <p class="section-subtext">
+                    Let’s connect if you need a website, web application, or development support.
+                </p>
+            </div>
 
-        <p id="form-status"></p>
-    </section>
+            <div class="social-icons">
+                <a href="https://github.com/CoderHashira" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile">
+                    <img src="./icons/github.png" alt="GitHub" width="40">
+                </a>
 
-</main>
+                <a href="https://www.linkedin.com/in/tatenda-mapfumo-008b6420a/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile">
+                    <img src="./icons/message.png" alt="LinkedIn" width="40">
+                </a>
+            </div>
+
+            <form class="form" id="contact-form">
+                <div class="form-item">
+                    <label for="name">Full Name</label>
+                    <input id="name" type="text" name="user_name" required>
+                </div>
+
+                <div class="form-item">
+                    <label for="email">Email Address</label>
+                    <input id="email" type="email" name="user_email" required>
+                </div>
+
+                <div class="form-item">
+                    <label for="phone">Contact Number</label>
+                    <input id="phone" type="tel" name="user_phone">
+                </div>
+
+                <div class="form-item">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+
+                <button type="submit">Send Message</button>
+            </form>
+
+            <p id="form-status"></p>
+        </section>
+
+    </main>
 
 </body>
 </html>
